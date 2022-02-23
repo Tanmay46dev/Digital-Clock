@@ -33,13 +33,11 @@ def main():
                     twelve_hour_clock = not twelve_hour_clock
 
         # Drawing
-
         current_time_surface = get_font(WIDTH-(WIDTH-100)).render(get_current_time(twelve_hour_clock), True, "white")
         WIN.blit(current_time_surface, current_time_surface.get_rect(center=(WIDTH/2, 100)))
         WIN.blit(current_date_surface, current_date_surface.get_rect(center=(WIDTH/2, 180)))
         
         WIN.blit(instruction_surface, instruction_surface.get_rect(center=(WIDTH/2, HEIGHT-100)))
-
 
         # Draw the current clock format
         if twelve_hour_clock:
